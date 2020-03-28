@@ -1,0 +1,15 @@
+<button
+  (click)="onToggleDetails()"
+  class="btn btn-primary">
+  Display Details
+</button>
+
+<p *ngIf="showDetails">
+  Secret Password = Tuna
+</p>
+
+<p [ngStyle]="{backgroundColor: i >= 5 ? 'blue' : 'transparent'}  "
+   [ngClass]="{'white-text': i >= 5 }"
+   *ngFor="let logItem of logToggles; let i = index;">
+  {{ logItem }}
+</p>
